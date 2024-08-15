@@ -1,5 +1,6 @@
 package com.tutusfunny.Library.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
-public class AuthorSaveDTO {
-    private String authorName;
+public class PatronUpdateDTO {
+    private Long id;
+    private String name;
+    private String contactInfo;
 }
