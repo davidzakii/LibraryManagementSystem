@@ -23,23 +23,29 @@ public class PatronServiceIMPL implements PatronService {
         return patronRepo.findById(id);
     }
 
+    @Override
+    public Patron savePatron(Patron patron) {
+        return null;
+    }
+
     public Patron addPatron(Patron patron) {
         return patronRepo.save(patron);
     }
 
-    public Patron updatePatron(Long id, Patron updatedPatron) {
+    public Optional<Patron> updatePatron(Long id, Patron updatedPatron) {
         Optional<Patron> patronOptional = patronRepo.findById(id);
         if (patronOptional.isPresent()) {
             Patron patron = patronOptional.get();
             patron.setName(updatedPatron.getName());
             patron.setContactInfo(updatedPatron.getContactInfo());
-            return patronRepo.save(patron);
+            return Optional.of(patronRepo.save(patron));
         } else {
-            return null; // Handle error
+            return Optional.empty(); // Handle error
         }
     }
 
-    public void deletePatron(Long id) {
+    public boolean deletePatron(Long id) {
         patronRepo.deleteById(id);
+        return false;
     }
 }

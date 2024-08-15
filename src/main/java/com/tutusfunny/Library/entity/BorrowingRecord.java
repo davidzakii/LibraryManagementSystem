@@ -20,4 +20,20 @@ public class BorrowingRecord {
 
     private LocalDate borrowDate;
     private LocalDate returnDate;
+
+    public void setBook(Book book) {
+
+    }
+
+    public void setPatron(Patron patron) {
+
+    }
+
+    public void setBorrowDate(LocalDate now) {
+
+    }
+
+    public void setReturnDate(LocalDate now) {
+
+    }
 }

@@ -11,4 +11,10 @@ public interface PatronService {
     List<Patron> getAllPatrons();
 
     Optional<Patron> getPatronById(Long id);
+
+    Patron savePatron(Patron patron);
+
+    Optional<Patron> updatePatron(Long id, Patron patronDetails);
+
+    boolean deletePatron(Long id);
 }

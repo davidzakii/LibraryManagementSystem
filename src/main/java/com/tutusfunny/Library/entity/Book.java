@@ -28,6 +28,9 @@ public class Book {
     public Book() {
     }
 
+    public Book(Long bookId) {
+    }
+
     public Long getId() {
         return id;
     }

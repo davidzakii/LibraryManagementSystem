@@ -14,6 +14,13 @@ public class Patron {
     private String name;
     private String contactInfo;
 
+    public Patron(Long patronId) {
+    }
+
+    public Patron() {
+
+    }
+
     public Long getId() {
         return id;
     }
